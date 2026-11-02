@@ -20,7 +20,9 @@ flowchart LR
 
 - Acceso al **Sandbox de AWS Academy** (región `us-east-1`).
 - Un navegador (la conexión a EC2 se hace con **EC2 Instance Connect** desde la consola).
-- **Terraform** en el computador del estudiante, solo para las actividades 04 y 05.
+- **Terraform** en el computador del estudiante, para las actividades 04, 05 y 07.
+- **psql** o **pgAdmin** en el computador del estudiante, solo para la Actividad 07 (opcional:
+  también se puede usar `psql` desde una EC2).
 - No se necesita Docker en el computador del estudiante: Docker corre dentro de EC2.
 
 ## La aplicación
@@ -55,6 +57,7 @@ Cada actividad agrega **una** idea nueva sobre la anterior.
 | 4 | Terraform EC2 | crear Security Group y EC2 con código | [`infra/terraform-ec2/`](infra/terraform-ec2/) |
 | 5 | Terraform VPC | construir la red (VPC, subnet, gateway, rutas) | [`infra/terraform-vpc/`](infra/terraform-vpc/) |
 | 6 | Dimensionamiento | medir la carga y elegir el tipo de instancia | [`load-tests/`](load-tests/) |
+| 7 | Terraform RDS | base de datos PostgreSQL administrada con datos de ejemplo | [`infra/terraform-rds/`](infra/terraform-rds/) |
 
 ## Estructura del repositorio
 
@@ -62,7 +65,7 @@ Cada actividad agrega **una** idea nueva sobre la anterior.
 app/            aplicación FastAPI (no cambia entre actividades)
 Dockerfile      receta de la imagen (no cambia entre actividades)
 requirements.txt
-infra/          script de arranque (User Data) y código Terraform
+infra/          script de arranque (User Data) y código Terraform (EC2, VPC, RDS)
 load-tests/     pruebas de carga con k6 (Actividad 06)
 ```
 
