@@ -1,6 +1,3 @@
-# Copia este archivo a terraform.tfvars (ese sí está en .gitignore, no se sube)
-# y pon tus valores reales ahí.
-
 aws_region   = "us-east-1"
-app_repo_url = "https://github.com/TU-USUARIO/aws-infrastructure-labs.git"
+app_repo_url = "https://github.com/bugJ1/aws-infrastructure-labs.git"
 db_password  = "CAMBIA-ESTA-CLAVE"
