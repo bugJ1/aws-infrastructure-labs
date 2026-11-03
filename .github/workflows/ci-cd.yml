@@ -22,8 +22,8 @@ jobs:
         run: pip install -r requirements.txt pytest httpx
 
       - name: Correr pruebas
-       run: PYTHONPATH=. pytest -q
-
+        run: PYTHONPATH=. pytest -q
+        
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3
         with:
